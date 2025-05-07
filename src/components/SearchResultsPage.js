@@ -20,7 +20,7 @@ const SearchResultsPage = () => {
 
     const fetchSearchResults = async () => {
         try {
-            const response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&key=${GOOGLE_API_KEY}&type=video`);
+            const response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&key=${process.env.REACT_APP_GOOGLE_API_KEY}&type=video`);
 
             if (!response.ok) {
                 throw new Error(`HTTP Error! Status: ${response.status}`);

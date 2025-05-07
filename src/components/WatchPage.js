@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux'
 import { closeMenu } from '../utils/appSlice';
 import { useSearchParams } from 'react-router-dom';
 import Comments from './Comments';
-import { GOOGLE_API_KEY } from '../utils/constants';
 import LiveChat from './LiveChat';
 
 const WatchPage = () => {
@@ -17,7 +16,7 @@ const WatchPage = () => {
     }, []);
     const getComments = async () => {
         try {
-            const response = await fetch(`https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&videoId=${searchParams.get("v")}&key=${GOOGLE_API_KEY}`);
+            const response = await fetch(`https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&videoId=${searchParams.get("v")}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`);
             if (!response.ok) {
                 throw new Error(`HTTP Error! Status: ${response.status}`);
             }

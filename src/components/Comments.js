@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { GOOGLE_API_KEY } from '../utils/constants';
 
 const Comments = ({ details }) => {
     const { snippet } = details;
@@ -10,7 +9,7 @@ const Comments = ({ details }) => {
         getReplies();
     }, []);
     const getReplies = async () => {
-        const response = await fetch(`https://youtube.googleapis.com/youtube/v3/comments?part=snippet&parentId=${id}&key=${GOOGLE_API_KEY}`);
+        const response = await fetch(`https://youtube.googleapis.com/youtube/v3/comments?part=snippet&parentId=${id}&key=${process.env.REACT_APP_GOOGLE_API_KEY}`);
         const data = await response.json();
         setReplies(data.items);
         console.log(data)
