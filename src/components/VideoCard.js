@@ -13,9 +13,9 @@ const VideoCard = ({ info }) => {
                     {formatDuration(contentDetails?.duration)}
                 </p>
             </div>
-            <h1 className="text-2xl font-bold px-2 py-1">{title}</h1>
-            <h2 className="font-semibold text-xl px-2 pb-1">{channelTitle}</h2>
-            <div className="flex px-2">
+            <h1 className="text-lg font-semibold px-2 py-1">{title}</h1>
+            <h2 className="font-semibold text-md px-2 pb-1">{channelTitle}</h2>
+            <div className="flex px-2 text-sm">
                 <p className="mr-3">{statistics?.viewCount} views</p>
                 <li>{timeAgo(publishedAt)}</li>
             </div>

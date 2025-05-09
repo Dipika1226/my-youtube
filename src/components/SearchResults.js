@@ -11,10 +11,10 @@ const SearchResults = ({ id, snippet }) => {
                 />
             </div>
             <div className='p-2 m-2 w-[65%]' >
-                <h2 className="text-2xl font-semibold mb-1">{snippet?.title}</h2>
-                <h3 className='text-md font-semibold mb-3'>{snippet?.channelTitle}</h3>
-                <p className='mb-1'>{timeAgo(snippet?.publishedAt)}</p>
-                <p className='text-md'>{snippet?.description}</p>
+                <h2 className="text-lg font-semibold mb-1">{snippet?.title}</h2>
+                <h3 className='text-sm font-semibold mb-3'>{snippet?.channelTitle}</h3>
+                <p className='mb-1 text-xs'>{timeAgo(snippet?.publishedAt)}</p>
+                <p className='text-sm'>{snippet?.description}</p>
             </div>
         </div>
 

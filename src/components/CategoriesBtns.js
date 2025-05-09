@@ -23,7 +23,7 @@ const CategoriesBtns = () => {
             {categories.slice(0, 10).map((category) => (
                 <button
                     key={category.id}
-                    className="px-4 py-2 m-2 bg-gray-300 hover:bg-gray-400 rounded-lg text-sm font-medium"
+                    className="px-4 py-2 m-1.5 bg-gray-300 hover:bg-gray-400 rounded-lg text-md font-medium"
                 >
                     {category.snippet.title}
                 </button>

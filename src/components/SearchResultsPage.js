@@ -44,7 +44,7 @@ const SearchResultsPage = () => {
         return (
             <div className="flex justify-center items-center min-h-screen bg-gray-100">
                 <div className="p-6  border border-green-100 rounded-lg shadow-md max-w-md text-center">
-                    <h2 className="text-xl font-bold text-black">Oops! Something went wrong</h2>
+                    <h2 className="text-lg font-bold text-black">Oops! Something went wrong</h2>
                     <p className="mt-2 text-gray-800">{error}</p>
                     <button
                         className="mt-4 px-4 py-2 bg-green-400 text-white rounded-lg shadow hover:bg-green-600"
@@ -60,7 +60,7 @@ const SearchResultsPage = () => {
     return (
         <div className=" mt-4">
             {results && results.length > 0 ? results.map((item) => (<Link to={"/watch?v=" + item.id.videoId} key={item.id.channelId || item.id.videoId}> <SearchResults {...item} /></Link>
-            )) : (<div className="text-gray-500 text-2xl">No results found for "{query}".</div>)
+            )) : (<div className="text-gray-500 text-xl">No results found for "{query}".</div>)
             }
         </div >
     );

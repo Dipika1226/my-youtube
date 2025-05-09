@@ -41,7 +41,7 @@ const WatchPage = () => {
                     <iframe width="850" height="500" src={"https://www.youtube.com/embed/" + searchParams.get("v")} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className='rounded-3xl'></iframe>
                 </div>
                 <div className='px-10'>
-                    <p className=' font-bold text-2xl'>COMMENTS:</p>
+                    <p className=' font-bold text-lg'>COMMENTS:</p>
                     {comments && comments.length > 0 ? comments.map((comment) => <Comments details={comment.snippet.topLevelComment} key={comment.id} />) : <p className='m-2 p-2 text-2xl semibold text-gray-500'>{error}</p>}
                 </div>
             </div>
